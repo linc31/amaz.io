@@ -13,6 +13,10 @@ seed.then(() => {
   return Product.create(sample)
 })
 
+Product.remove({}).then( () => {
+  
+})
+
 .then((product) => {
   console.log(product);
   require('mongoose').connection.close();
