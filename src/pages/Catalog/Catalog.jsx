@@ -1,11 +1,15 @@
 import React from 'react';
 
 const Catalog = (props) => {
+
   return (
     <div>
-      <p> Product Name: &nbsp;
-      {props.products ? props.products[4].name : <h1>sloading</h1>}
-      </p>
+      Product Name: &nbsp;
+      {props.products 
+      ? 
+      props.products.map((product, idx) => <li key={idx}>{product.name}</li>) 
+      : 
+      <h1>sloading</h1>}
     </div>
   )
 }
