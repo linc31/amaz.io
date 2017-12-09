@@ -19,6 +19,6 @@ Product.remove({}).then( () => {
 
 .then((product) => {
   console.log(product);
-  require('mongoose').connection.close();
+  mongoose.connection.close();
   process.exit();
 });
